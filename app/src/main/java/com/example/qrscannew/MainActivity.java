@@ -113,11 +113,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     if(number.matches("^[0-9]*$") && number.length() > 10){
                         Intent callIntent = new Intent(Intent.ACTION_CALL);
-                        Intent dialIntent = new Intent(Intent.ACTION_DIAL);
-                        dialIntent.setData(Uri.parse("tel:" + number));
                         callIntent.setData(Uri.parse("tel:" + number));
                         startActivity(callIntent);
-                        startActivity(dialIntent);
                     }
 
                     //4.buka koordinat maps
